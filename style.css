@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #b9cbd3;
+}
+.jeux{
+   
+    background: linear-gradient(rgb(53, 9, 227),rgb(195, 15, 227));
+    width: 600px;
+    margin-top: 11%;
+    padding-top: 20px;
+}
+.img{
+   background: #420aec;
+}
+.img:hover{
+   background: #e807ec;
+}
+.contenu{
+    width: 200px;
+    height: 150px;
+}
+strong{
+    padding-left: 69px;
+    font-size: 25px;
+}
