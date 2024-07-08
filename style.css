@@ -25,3 +25,12 @@ strong{
     padding-left: 69px;
     font-size: 25px;
 }
+#score{
+    display: block;
+    margin-top: 11%;
+    background: linear-gradient(#2cb9f6,#0ad5d8);
+    height: 118px;
+}
+.affich{
+    display: inline;
+}

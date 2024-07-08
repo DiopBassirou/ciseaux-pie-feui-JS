@@ -4,6 +4,10 @@ let pierre = document.getElementById('Pierre')
 let papier = document.getElementById('Papier')
 let ciseaux = document.getElementById('Ciseaux');
 let h1=document.querySelector('h1')
+let monScore=document.getElementById('my');
+let scoreOrdi=document.getElementById('computer');
+let scoreInitial=0;
+let scoreInitialOrd=0;
 let idDeMonChoix;
 let valAleatoir;
 papier.addEventListener('click', (e) => {
@@ -31,14 +35,38 @@ function choix() {
     equal() 
 }
 function win(){
-    if(idDeMonChoix=="Ciseaux" &&  valAleatoir==0 /*papier=0*/){h1.innerHTML="gagner" }
-    if(idDeMonChoix=="Pierre" &&  valAleatoir==1 /*ciseaux=1*/ ){h1.innerHTML="gagner" }
-    if(idDeMonChoix=="Papier" &&  valAleatoir==2 /*pierre=2*/ ){h1.innerHTML="gagner" }
+    if(idDeMonChoix=="Ciseaux" &&  valAleatoir==0 /*papier=0*/){
+        h1.innerHTML="gagner"
+        scoreInitialOrd++;
+        monScore.innerHTML=scoreInitial+':';
+    }
+    if(idDeMonChoix=="Pierre" &&  valAleatoir==1 /*ciseaux=1*/ ){
+        h1.innerHTML="gagner"
+        scoreInitial++;
+        monScore.innerHTML=scoreInitial+':';
+     }
+    if(idDeMonChoix=="Papier" &&  valAleatoir==2 /*pierre=2*/ ){
+        h1.innerHTML="gagner"
+        scoreInitial++;
+        monScore.innerHTML=scoreInitial+':';
+     }
 }
 function lose(){
-    if(idDeMonChoix=="Pierre" &&  valAleatoir==0 /*papier=0*/){h1.innerHTML="perdu"}
-    if(idDeMonChoix=="Papier" &&  valAleatoir==1 /*ciseaux=1*/ ){h1.innerHTML="perdu"}
-    if(idDeMonChoix=="Ciseaux" &&  valAleatoir==2 /*pierre=2*/ ){h1.innerHTML="perdu"}
+    if(idDeMonChoix=="Pierre" &&  valAleatoir==0 /*papier=0*/){
+        h1.innerHTML="perdu"
+        scoreInitialOrd++;
+        scoreOrdi.innerHTML=scoreInitialOrd;
+    }
+    if(idDeMonChoix=="Papier" &&  valAleatoir==1 /*ciseaux=1*/ ){
+        h1.innerHTML="perdu"
+        scoreInitialOrd++;
+        scoreOrdi.innerHTML=scoreInitialOrd;
+    }
+    if(idDeMonChoix=="Ciseaux" &&  valAleatoir==2 /*pierre=2*/ ){
+        h1.innerHTML="perdu"
+        scoreInitialOrd++;
+        scoreOrdi.innerHTML=scoreInitialOrd;
+    }
 }
 function equal(){
     if(idDeMonChoix=="Papier" &&  valAleatoir==0 /*papier=0*/){h1.innerHTML="nul"}
